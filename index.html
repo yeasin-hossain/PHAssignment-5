@@ -13,6 +13,7 @@
 		/>
 	</head>
 	<body>
+		<!-- Nav -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-white container">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
@@ -35,20 +36,15 @@
 				>
 					<div class="navbar-nav">
 						<a class="nav-link active" aria-current="page" href="#">Home</a>
-						<a class="nav-link" href="#">Features</a>
-						<a class="nav-link" href="#">Pricing</a>
-						<a
-							class="nav-link disabled"
-							href="#"
-							tabindex="-1"
-							aria-disabled="true"
-							>Disabled</a
-						>
+						<a class="nav-link" href="#">About</a>
+						<a class="nav-link" href="#">Recipes</a>
+						<a class="nav-link" href="#" tabindex="-1">Blog</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<main class="container">
+			<!-- Search Info -->
 			<div class="search__section d-flex justify-content-center">
 				<div class="input-group my-3 w-50">
 					<input
@@ -64,17 +60,28 @@
 					</button>
 				</div>
 			</div>
+
+			<div class="error__message d-none text-center my-5">
+				<!-- Error Message -->
+			</div>
+			<!-- Content Section -->
 			<div
 				class="content__section d-flex gap-3 flex-wrap justify-content-center"
 			></div>
-			<div class="single__item">
-				<!-- Full screen modal -->
-			</div>
-			<div class="error__message d-none text-center mt-5">
-				<!-- Full screen modal -->
+			<!-- Spinner -->
+			<div class="justify-content-center d-none" id="spinner">
+				<div class="spinner-border" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
 			</div>
 		</main>
-
+		<!-- Modal section-->
+		<div
+			class="message__modal position-absolute w-100 min-vh-100 h-auto top-0 d-none justify-content-center align-items-center"
+			style="background-color: #00000061; z-index: 999"
+		>
+			<!-- Modal -->
+		</div>
 		<script src="app.js"></script>
 	</body>
 </html>
