@@ -52,14 +52,14 @@ const recipeRender = (recipes) => {
 
 // single recipe render function
 const singleRecipeRender = (recipes) => {
-	// in strMeasures has null and empty value that's why i filter it using for loop.
-	const strMeasures = recipes[0];
-	const strMeasure = [];
+	// in ingredients has null and empty value that's why i filter it using for loop.
+	const ingredients = recipes[0];
+	const ingredient = [];
 	for (let i = 1; i <= 20; i++) {
-		if (strMeasures[`strIngredient${i}`]) {
-			strMeasure.push(
-				`<li class="list-group-item">✔ ${strMeasures[`strMeasure${i}`]} ${
-					strMeasures[`strIngredient${i}`]
+		if (ingredients[`strIngredient${i}`]) {
+			ingredient.push(
+				`<li class="list-group-item">✔ ${ingredients[`strMeasure${i}`]} ${
+					ingredients[`strIngredient${i}`]
 				}</li>`
 			);
 		}
@@ -79,7 +79,7 @@ const singleRecipeRender = (recipes) => {
                 </div>
                 <ul class="list-group list-group-flush">
                 <h6 class="card-text">Ingredients</h6>
-                    ${strMeasure.join('')}
+                    ${ingredient.join('')}
                 </ul>
                 <button class="btn btn-info" onClick="modalClose()">Close</button>
             </div>
