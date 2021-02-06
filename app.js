@@ -14,6 +14,7 @@ const fetchRecipe = (recipeName) => {
 					message(
 						`<h4>😢 😢 Sorry <span class="text-danger"> ${recipeName} </span> is not Available! please Try Something else!</h4>`
 					);
+					spinner('stop');
 				}
 			});
 	} else {
