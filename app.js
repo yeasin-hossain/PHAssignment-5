@@ -18,6 +18,8 @@ const fetchRecipe = (recipeName) => {
 				}
 			});
 	} else {
+		//  i don't know what's wrong with "spinner" function. it's not working hare. that's why i choice alternative
+		document.querySelector('.spinner-border').classList.add('d-none');
 		spinner('stop');
 		message(`<h4>😢 😢 Your recipe name Please!!!</h4>`);
 	}
