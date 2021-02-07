@@ -18,6 +18,7 @@ const fetchRecipe = (recipeName) => {
 				}
 			});
 	} else {
+		spinner('stop');
 		message(`<h4>😢 😢 Your recipe name Please!!!</h4>`);
 	}
 };
@@ -48,7 +49,7 @@ const recipeRender = (recipes) => {
 		})
 		.join('');
 	document.querySelector('.content__section').innerHTML = recipeItem;
-	spinner('off');
+	spinner('stop');
 };
 
 // single recipe render function
@@ -99,6 +100,7 @@ item__name.addEventListener('keyup', (e) => {
 // Button event
 searchButton.addEventListener('click', () => {
 	fetchRecipe(itemName.value);
+	spinner('open');
 });
 
 // error message
